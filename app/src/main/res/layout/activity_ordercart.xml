@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+>
+    <ScrollView android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/sw_layout"
+        android:layout_above="@+id/footer"
+        android:orientation="vertical">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/order_list_recycler_view"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+         />
+
+    </ScrollView>
+    <RelativeLayout
+        android:padding="10dp"
+        android:id="@+id/footer"
+        android:background="@drawable/top_border"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/total"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="20sp"
+            android:text="Total :"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textSize="20sp"
+            android:text="$300"
+            android:textColor="@color/green"
+            android:id="@+id/total_amount"
+            android:layout_toRightOf="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_below="@+id/total"
+        android:id="@+id/process_order_btn"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:background="@drawable/round_button"
+        android:textColor="@color/white"
+        android:layout_margin="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="Process Order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>
+
+</RelativeLayout>
